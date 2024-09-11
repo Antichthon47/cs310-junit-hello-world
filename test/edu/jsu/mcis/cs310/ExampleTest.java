@@ -48,5 +48,18 @@ public class ExampleTest {
         String actual = main.reverse("Hickory Dickory Dock");
         assertEquals(expectedReverse3, actual);
     }
-    
+
+    // Additional test case
+    @Test
+    public void testReverseMessage4() {
+        String actual = main.reverse("Java Programming");
+        
+    // Deliberate failure to observe the difference
+        String expectedIncorrect = "gnimmargorP avaJ"; // Wrong expected value
+        assertEquals(expectedIncorrect, actual);
+        
+    // Correct expected value after fixing
+        String expectedCorrect = "gnimmargorP avaJ";
+        assertEquals(expectedCorrect, actual);
+    }
 }
